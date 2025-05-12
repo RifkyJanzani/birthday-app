@@ -12,7 +12,6 @@ export default function GalleryScreen() {
   const [progress, setProgress] = useState(0);
   const [dots, setDots] = useState('');
   const [visibleFrames, setVisibleFrames] = useState<number[]>([]);
-  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
   const playfulColors = [
   'text-pink-500',
@@ -45,7 +44,6 @@ export default function GalleryScreen() {
     setStage('preparing');
     setProgress(0);
     setVisibleFrames([]);
-    setCurrentPhotoIndex(0);
   };
 
   useEffect(() => {
