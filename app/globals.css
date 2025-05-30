@@ -23,7 +23,7 @@
 }
 
 body {
-  @apply bg-teal-800;
+  @apply bg-gray-700;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -31,7 +31,7 @@ body {
   width: 6px;
 }
 .scrollbar::-webkit-scrollbar-thumb {
-  background-color: #22c55e; /* Tailwind green-500 */
+  background-color: #d6e2e6; /* Tailwind green-500 */
   border-radius: 10px;
 }
 .scrollbar::-webkit-scrollbar-track {

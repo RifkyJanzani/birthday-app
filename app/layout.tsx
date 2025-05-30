@@ -2,6 +2,7 @@ import { Press_Start_2P } from 'next/font/google';
 import type { Metadata } from "next";
 import "./globals.css";
 import LoadingScreen from '@/components/LoadingScreen';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const pressStart = Press_Start_2P({
   weight: '400',
@@ -10,8 +11,8 @@ const pressStart = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: 'Happy Birthday',
-  description: 'Happy Birthday themed website',
+  title: 'For U. Anjay',
+  description: 'Biasalah iseng',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -20,6 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-pixel">
         <LoadingScreen />
         {children}
+        <AudioPlayer />
       </body>
     </html>
   );

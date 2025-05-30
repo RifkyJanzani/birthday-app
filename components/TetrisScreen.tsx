@@ -139,7 +139,7 @@ export default function TetrisScreen() {
             <div className="bg-[#18192b] border-4 border-yellow-300 rounded-xl px-6 py-8 flex flex-col items-center shadow-2xl" style={{minWidth: 260}}>
               <div className="text-4xl font-bold mb-4" style={{color: '#ffe14b', fontFamily: 'Press Start 2P, monospace', letterSpacing: 2}}>REMINDER</div>
               <div className="text-green-400 text-lg mb-6 text-center font-mono" style={{lineHeight: '1.3', fontFamily: 'Press Start 2P, monospace'}}>
-                Aaanjay, kereenn. Tapi walaupun kamu kalah,<br/>kamu selalu menang kok di hatiku.<br/>deeeemmmm
+                Aaanjay, kereenn. Tapi walaupun kamu kalah,<br/>kamu selalu menang kok di hatiku.<br/>deeeemmmm.<br/>*ini yang urang tunjukin tea wkwkwk
               </div>
               <button
                 onClick={handleReminderOk}

@@ -5,13 +5,21 @@ import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 export default function MessageScreen() {
-  const greeting = 'Halooo Zahraaaa.';
-  const wish = 'Selamat Ulang Tahun!!!';
+  const greeting = 'Halooo Tireekk.';
+  const wish = 'Hows ur day going?';
   const paragraphs = [
-    'Gimana rasanya kepala 2? hahahahhaha. Udah ada gebrakan apa aja nihhh, deeemm.',
-    'Semogaa semua yang diinginkan bisa tercapai yaaa. Kalau bingung ingin apa, jadi masa depanku juga boleh ahahahahhaha.',
-    'Juga semoga semua hal baik selalu beriringann. Ga perlu keinginan atau janji yang tinggi, kamu cukup ada, dan dunia terasa lebih ringan, lebih baik, lebih bisa dihadapi. Dunia ini lebih seru karena ada kamu di dalamnya (dan obrolan kita yang kadang absurd tapi bermakna itu).',
-    'Hope ur special day is as incredible as you are.!',
+    'Semoga harimu selalu baik walau kadang tanpa aku di dalemnya. anjay hahahaha alay cok.',
+    'Proud of you karena kamu udah bangun setiap harinya.',
+    'Proud of you karena kamu ada disini.',
+    'Aku harap kamu gak pernah lupa untuk apresiasi diri kamu sendiri, karena kamu udah berjuang setiap harinya walau terasa berat. You have done a great job! I always proud of u',
+    'Di hari yang spesial buat aku ini (ga trlalu spesial juga sih jir) aku cuma mau bilang makasii yaa udah jadi teman baikku, maafin jugaa kalo aku kadang suka ngeselin dan annoying',
+    'Seneng bisa jadi orang yang bisa hadir di kehidupan kamu, aku juga seneng kamu bisa hadir dan selalu ada di my kisah',
+    'Seneng kalo ditanyain "gimana hari ini?" atau kek sekedar di tmi in. Seneng karena kamu masih inget aku masih ada di dunia ini.',
+    'Ga yang harus selalu minta dipahami sepenuhnya, tapi kalo bisa dipeluk walau cuma lewat obrolan ringan, itu udah cukup bikin aku ngerasa gak sendirian.',
+    'Sebuah keberuntungan banget bisa kenal dan temenan sama kamu sampai sejauh ini.',
+    'Deeeem absolute cinema gasi kata kata aku dari tadi awal',
+    'Maaf yyy kalo belakangan ini aku agak gimana gituu',
+    'Jangan baeudan lagi plis',
   ];
 
   const [greetingShown, setGreetingShown] = useState(0);
@@ -50,7 +58,7 @@ export default function MessageScreen() {
   const getBlinkingCursor = () => <span className="animate-blink">|</span>;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-teal-800">
+    <div className="min-h-screen flex items-center justify-center bg-gray-700">
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -80,7 +88,7 @@ export default function MessageScreen() {
 
           <button
             onClick={handleSkip}
-            className="bg-blue-600 text-white text-sm font-bold py-2 rounded shadow-md w-full"
+            className="bg-blue-600 text-white text-sm font-bold py-2 rounded shadow-md w-full hover:bg-blue-700 transition-colors"
           >
             SKIP
           </button>
@@ -88,12 +96,12 @@ export default function MessageScreen() {
 
         <div className="flex flex-col gap-2 w-full mt-auto">
           <Link href="/gallery">
-            <button className="bg-green-700 text-white w-full py-2 rounded font-bold text-sm shadow-md">
+            <button className="bg-green-700 text-white w-full py-2 rounded font-bold text-sm shadow-md hover:bg-green-800 transition-colors">
               SELANJUTNYA
             </button>
           </Link>
           <Link href="/">
-            <button className="bg-orange-700 text-white w-full py-2 rounded font-bold text-sm shadow-md">
+            <button className="bg-orange-700 text-white w-full py-2 rounded font-bold text-sm shadow-md hover:bg-orange-800 transition-colors">
               KEMBALI
             </button>
           </Link>
