@@ -11,10 +11,10 @@ export default function GameBoy() {
         </div>
 
         <div className="grid grid-cols-2 gap-4 mt-6">
-          <a href="/message" className="bg-purple-500 text-white py-3 rounded shadow-md text-center hover:bg-purple-600 transition-colors">MESSAGE</a>
-          <a href="/gallery" className="bg-green-700 text-white py-3 rounded shadow-md text-center hover:bg-green-800 transition-colors">GALLERY</a>
-          <a href="/tetris" className="bg-orange-600 text-white py-3 rounded shadow-md text-center hover:bg-orange-700 transition-colors">TETRIS</a>
-          <a href="/" className="bg-blue-600 text-white py-3 rounded shadow-md text-center hover:bg-blue-700 transition-colors">HOME</a>
+          <Link href="/message" className="bg-purple-500 text-white py-3 rounded shadow-md text-center hover:bg-purple-600 transition-colors">MESSAGE</Link>
+          <Link href="/gallery" className="bg-green-700 text-white py-3 rounded shadow-md text-center hover:bg-green-800 transition-colors">GALLERY</Link>
+          <Link href="/tetris" className="bg-orange-600 text-white py-3 rounded shadow-md text-center hover:bg-orange-700 transition-colors">TETRIS</Link>
+          <Link href="/" className="bg-blue-600 text-white py-3 rounded shadow-md text-center hover:bg-blue-700 transition-colors">HOME</Link>
         </div>
 
         <div className="flex justify-center mt-6">
@@ -37,11 +37,10 @@ export default function GameBoy() {
         </div>
 
         <Link href="/message">
-            <div className="flex justify-center mt-4">
+          <div className="flex justify-center mt-4">
             <button className="bg-gray-400 text-white px-4 py-1 rounded-full text-xs font-bold shadow-inner">START</button>
-            </div>
+          </div>
         </Link>
-        
       </div>
     </div>
   );
