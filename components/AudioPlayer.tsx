@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import YouTube from 'react-youtube';
+import YouTube, { YouTubePlayer } from 'react-youtube';
 
 export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [volume, setVolume] = useState(50);
-  const playerRef = useRef<any>(null);
+  const playerRef = useRef<YouTubePlayer | null>(null);
 
   // Video ID dari YouTube (Happy Birthday Song)
   const videoId = "i_rw1C9eG_Q";
@@ -28,7 +28,7 @@ export default function AudioPlayer() {
     },
   };
 
-  const onReady = (event: any) => {
+  const onReady = (event: { target: YouTubePlayer }) => {
     playerRef.current = event.target;
     playerRef.current.setVolume(volume);
     setIsPlaying(true);
