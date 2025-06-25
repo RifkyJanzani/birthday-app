@@ -24,6 +24,7 @@ const COLORS = [
 ];
 
 const POINTS_PER_LINE = 100;
+const POINTS_PER_HARD_DROP = 2;
 
 const createEmptyBoard = () =>
   Array.from({ length: ROWS }, () => Array(COLS).fill(0));
@@ -53,9 +54,11 @@ const TetrisGame = forwardRef<TetrisGameHandle, { onScoreChange?: (score: number
   const [board, setBoard] = useState(createEmptyBoard());
   const [currentPiece, setCurrentPiece] = useState(generatePiece());
   const [ghostPiece, setGhostPiece] = useState<typeof currentPiece | null>(null);
+  const [isDropping, setIsDropping] = useState(false);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const dropIntervalRef = useRef<NodeJS.Timeout | null>(null);
 
   function generatePiece() {
     const index = Math.floor(Math.random() * TETROMINO.length);
@@ -175,8 +178,10 @@ const TetrisGame = forwardRef<TetrisGameHandle, { onScoreChange?: (score: number
 
     setCurrentPiece(prev => {
       let newRow = prev.row;
+      let dropDistance = 0;
       while (isValidMove(prev, newRow + 1, prev.col)) {
         newRow++;
+        dropDistance++;
       }
       return { ...prev, row: newRow };
     });
